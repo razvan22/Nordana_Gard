@@ -1,98 +1,56 @@
 <template>
   <div id="app">
-    <navbar></navbar>
-    <div class="lang container-fluid d-flex justify-content-end mr-5">
-      <langagePicker/>
-    </div>
-    <div class="home">
-      <div class="container">
-        <div class="head"></div>
-        <div class="container mt-1">
-          <h1 class="pt-2 text-center">Nordanå Gård</h1>
-        </div>
+    <div id="app-main">
+      <navBar/>
+      <div class="main pt-3">
+        <div  class="container-fluid d-flex justify-content-end"><langauage-picker id="language-picker" /></div>
+        <router-view/>
       </div>
     </div>
-    <boot-footer></boot-footer>
+    <bootFooter/>
   </div>
 </template>
-
 <script>
-import navbar from '@/components/navbar.vue';
-import bootFooter from './components/bootFooter.vue'
-import langagePicker from './components/languagePicker'
-
-
-
+import navBar from '../src/components/navbar.vue'
+import langauagePicker from '../src/components/languagePicker.vue'
+import bootFooter from '../src/components/bootFooter.vue'
 export default {
-  components: {
-    navbar,
-    bootFooter,
-    langagePicker
+  components:{
+    navBar,
+    langauagePicker,
+    bootFooter
   },
   created(){
-     this.$store.dispatch("setSwedish")
+    this.$store.dispatch("setSwedish")
   }
 }
-
 </script>
 
 <style scoped>
-#app .lang{
-  margin-top: 5rem;
-}
-.home .container h1{
-  font-size: 5rem;
-  color:#2D4159;
-  font-family: 'Parisienne', cursive;
-}
 
-.head {
-    height: 20rem;
-    min-height: 20rem;
-    background-image:  linear-gradient(
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3)
-      ), url('assets/head.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-   
+#app{
+  padding-top:16vh;
+  position: relative;
+  min-height: 100vh;
 }
-.home{
-  height: 90vh;
+#app-main{
 }
-.home .container .container{
-  background-color: #EDEAE5;
+#foot{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
-
-
-
-@media only screen and (max-width: 600px) {
-  .home .container h1{
-    font-size: 2.70rem;
-  }
-}
-
 @media only screen and (min-width: 600px) {
-  .home .container h1{
-    font-size: 4rem;
+  #app{
+    padding-top:12vh;
   }
-   
-}
-
-@media only screen and (min-width: 768px) {
-  .home .container h1{
-    font-size: 5rem;
+  #language-picker{
+    padding-right: 2vw;
   }
-
-
 }
-@media only screen and (min-width: 992px) {
-
-
+@media only screen and (max-width: 600px) {
+  #app{
+    padding-top:15vh;
+  }
 }
-
-
-
-
 </style>

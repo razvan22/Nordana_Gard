@@ -1,31 +1,29 @@
 <template>
-    <nav class="container">
-        <div class="container ">
-            <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
-                <router-link to="/" class="navbar-brand text-light  pl-5">Nordanå Gård</router-link>
-                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon "></span>
-                </button>
-                <div class="container">
-                    <div class="collapse navbar-collapse nav justify-content-end  align-self-md-center" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <router-link to="/" class="nav-link text-light">{{currentLanguage.nav.home}}</router-link>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link text-light" href="gallery.html">{{currentLanguage.nav.booking}}</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link text-light" href="gallery.html">{{currentLanguage.nav.gallery}}</a>
-                            </li>
-                            <li class="aboutus nav-item active ">
-                                <a class="nav-link text-light" href="aboutus.html">{{currentLanguage.nav.aboutUs}}</a>
-                            </li>
-                        </ul>
-                    </div>
+    <nav>
+        <nav id="mynav" class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+            <router-link to="/" class="navbar-brand text-light ">Nordanå Gård</router-link>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="container">
+                <div class="collapse navbar-collapse nav justify-content-end  align-self-md-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <router-link to="/" class="nav-link text-light">{{currentLanguage.nav.home}}</router-link>
+                        </li>
+                        <li class="nav-item active">
+                            <router-link to="/booking" class="nav-link text-light">{{currentLanguage.nav.booking}}</router-link>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="gallery.html">{{currentLanguage.nav.gallery}}</a>
+                        </li>
+                        <li class="aboutus nav-item active ">
+                            <a class="nav-link text-light" href="aboutus.html">{{currentLanguage.nav.aboutUs}}</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </nav>
 </template>
 
@@ -60,7 +58,7 @@ export default {
 .navbar-nav .nav-item{
     font-weight: 200 !important;
     font-size: 1.50em !important;
-    margin: 1vh 2vw 1vh 2vw;
+    margin: 0vh 2vw 0vh 2vw;
 }
 
 @media only screen and (max-width: 600px) {
