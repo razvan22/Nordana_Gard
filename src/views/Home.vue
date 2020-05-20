@@ -1,6 +1,6 @@
 <template>
 <div class="home">
-  <div class="container px-0 ">
+  <div class="container px-0">
       <div class="head"></div>
       <div id="main" class="container">
           <h1 class="pt-4 text-center">Nordanå Gård</h1>
@@ -11,19 +11,23 @@
               <a href="https://sv.wikipedia.org/wiki/Van%C3%A5s_slott">{{home_text.p2.p2vanas}}</a>{{home_text.p2.p2e}}<a href="https://sv.wikipedia.org/wiki/Vinsl%C3%B6v">{{home_text.p2.p2vins}}</a>{{home_text.p2.p2f}}<a href="https://sv.wikipedia.org/wiki/Pl%C3%B6tsligt_i_Vinsl%C3%B6v">{{home_text.p2.p2plot}}</a>
               {{home_text.p2.p2samt}}<a href="">{{home_text.p2.p2fleder}}</a>
             </p>
-            <div class="containe">
-              <div class="row">
-                <div class="col col-sm-2">
+            <div class="containe mt-2">
+              <div class="row d-flex align-items-center justify-content-center my-4">
+                <div class="col-sm-10 col-md-2 d-flex  justify-content-center my-2">
                   <i class="fas fa-wifi"></i>
                 </div>
-                <div class="col">
+                <div class="col-sm-10 col-md-5 d-flex  justify-content-center  my-2">
+                  <h4 class="text-center">High Speed Internet (free of charge)</h4>
+                </div>
+              </div>
+
+              <div class="row">
+                 <div class="col">
                   <i class="fas fa-parking"></i>
                 </div>
                 <div class="col">
                     <i class="fas fa-paw"></i>
                 </div>
-              </div>
-              <div class="row">
                 <div class="col">
                   <i class="far fa-handshake"></i>
                 </div>
@@ -50,6 +54,15 @@ export default {
 </script>
 
 <style scoped>
+h4{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2D4159;
+}
+.container .fas {
+  font-size: 2rem;
+  color: #2D4159;
+}
+
 .home #main img{
   height: auto;
   max-width: 30%;
@@ -62,6 +75,7 @@ export default {
   font-size: 5rem;
   color:#2D4159;
   font-family: 'Parisienne', cursive;
+  
   
 }
 
@@ -102,12 +116,20 @@ export default {
   .home .container h1{
     font-size: 5rem;
   }
-
+  h4{
+    font-size: 16px;
+  }
 
 }
+@media only screen and (min-width: 830px) {
+  h4{
+    font-size: 16px;
+  }
+}
 @media only screen and (min-width: 992px) {
-
-
+  h4{
+    font-size: 20px;
+  }
 }
 
 </style>

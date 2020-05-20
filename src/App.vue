@@ -1,12 +1,8 @@
 <template>
   <div id="app">
-    <div id="app-main">
-      <navBar/>
-      <div class="main pt-3">
-        <div  class="container-fluid d-flex justify-content-end"><langauage-picker id="language-picker" /></div>
-        <router-view/>
-      </div>
-    </div>
+    <navBar/>
+    <langauage-picker id="language-picker" class="d-flex justify-content-end pr-0"/>
+     <router-view/>
     <bootFooter/>
   </div>
 </template>
@@ -29,12 +25,10 @@ export default {
 <style scoped>
 
 #app{
-  padding-top:16vh;
   position: relative;
   min-height: 100vh;
 }
-#app-main{
-}
+
 #foot{
   position: absolute;
   bottom: 0;
@@ -42,7 +36,7 @@ export default {
 }
 @media only screen and (min-width: 600px) {
   #app{
-    padding-top:12vh;
+    padding-top:5rem;
   }
   #language-picker{
     padding-right: 2vw;
@@ -50,7 +44,7 @@ export default {
 }
 @media only screen and (max-width: 600px) {
   #app{
-    padding-top:15vh;
+    padding-top:4rem;
   }
 }
 </style>
