@@ -2,12 +2,12 @@
     <nav>
         <nav id="mynav" class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
             <router-link to="/" class="navbar-brand text-light ">Nordanå Gård</router-link>
-            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button  class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon "></span>
             </button>
             <div class="container">
                 <div class="collapse navbar-collapse nav justify-content-end  align-self-md-center" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav" >
                         <li class="nav-item active">
                             <router-link to="/" class="nav-link text-light">{{currentLanguage.nav.home}}</router-link>
                         </li>
@@ -15,10 +15,10 @@
                             <router-link to="/booking" class="nav-link text-light">{{currentLanguage.nav.booking}}</router-link>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-light" href="gallery.html">{{currentLanguage.nav.gallery}}</a>
+                            <router-link to="/gallery" class="nav-link text-light" href="gallery.html">{{currentLanguage.nav.gallery}}</router-link>
                         </li>
                         <li class="aboutus nav-item active ">
-                            <a class="nav-link text-light" href="aboutus.html">{{currentLanguage.nav.aboutUs}}</a>
+                            <router-link to="/about" class="nav-link text-light" href="aboutus.html">{{currentLanguage.nav.aboutUs}}</router-link>
                         </li>
                     </ul>
                 </div>

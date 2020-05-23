@@ -15,17 +15,29 @@ export default new Vuex.Store({
   actions: {
     setSwedish({ commit }){
       let se = {
+        booking:{
+          h1:" Boka ",
+          h4:" Använd rabatt kod 2020 (eller Working2020 för företag) för att få 30% rabatt !!! "
+        },
           nav:{
             home:"Hem",
             booking:"Bokning",
             gallery: "Galleri",
             aboutUs: "Om oss"
           },
+          info:{
+            wifi:"Gratis höghastighetsinternet",
+            parking:"Gratis parkering",
+            language:"Svenska Danska Engelska",
+            smoking:" Rökning i huset är inte tillåtet",
+            pets:" Husdjur accepteras. Avgifter kan tillkomma",
+            pool:" Utomhuspool "
+          },
           flag:{
             icon: "flag-icon flag-icon-se",
             text: {
               se: " Svenska",
-              en: " Engelsk"
+              en: " Engelska"
             }
           },
           contactText: "Kontakta oss ",
@@ -48,7 +60,8 @@ export default new Vuex.Store({
               p2plot:"Plötsligt i Vinslöv",
               p2samt:" samt Flädergården också i Vinslöv. ",
             },
-          }
+          },
+         
           
       }
       commit("setLangage", se);
@@ -56,6 +69,10 @@ export default new Vuex.Store({
 
     setEnglish({ commit }){
       let en = {
+          booking:{
+            h1:" Reserve ",
+            h4:" Use the promotion code 2020 (or Working2020 for companies) to get 30% discount !!!"
+          },
           nav:{
             home:"Home",
             booking:"Booking",
@@ -68,6 +85,14 @@ export default new Vuex.Store({
               se: " Swedish",
               en: " English"
             }
+          },
+          info:{
+            wifi:" High Speed Internet (free of charge) ",
+            parking:" Free Parking",
+            language:" Swedish Danish English",
+            smoking:" Non-smoking rooms",
+            pets:" Pets are allowed. Charges may apply",
+            pool:" Outdoor pool"
           },
           contactText: "Contact Us",
           home_text:{
@@ -89,9 +114,9 @@ export default new Vuex.Store({
               p2vins:"Vinslöv",
               p2f:"  and the cult film ",
               p2plot:"Plötsligt i Vinslöv.",
-              p2samt:"",
             },
-          }
+          },
+
           
       }
       commit("setLangage", en);

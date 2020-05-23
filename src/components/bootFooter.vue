@@ -7,7 +7,7 @@
                     <p style="font-family: 'Montserrat'; color: #EDEAE5;" class="text-center">Kålaberga Vägen 130-51 288 90 Vinslöv</p>
                 </div>
                 <div class="col-sm-12 col-md-4 d-flex align-items-center justify-content-center ">
-                    <i class="fas fa-phone-alt pr-3 pb-3 "></i><a href="tel:+46 736 818 400"><h5 style="color: aliceblue; font-family: 'Montserrat;">+46 736 818 400</h5></a>
+                    <i class="fas fa-phone-alt pr-3 pb-3 "></i><a href="tel:+46 736 818 400"><h5 class="phone" style="color: aliceblue; font-family: 'Montserrat;">+46 736 818 400</h5></a>
                 </div>
                 <div class="col-sm-12 col-md-4 py-3">
                     <div class="row justify-content-center">
@@ -29,18 +29,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row align-items-center justify-content-center pb-3">
+                <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat'; font-size: 1.20rem;" class="text-white" to="/">{{getFooter.nav.home}}</router-link></div>
+                <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat'; font-size: 1.20rem;" class="text-white" to="/booking">{{getFooter.nav.booking}}</router-link></div>
+                <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat'; font-size: 1.20rem;" class="text-white" to="/gallery">{{getFooter.nav.gallery}}</router-link></div>
+                <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat'; font-size: 1.20rem;" class="text-white" to="/aboutus">{{getFooter.nav.aboutUs}}</router-link></div>
+            </div>
+            <div class="row pb-3">
                 <div class="col ">
                     <div style="height: 150px;" class="embed-responsive embed-responsive-21by9 hoverable z-depth-1">
                         <iframe class="embed-responsive-item"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2225.3245897783518!2d14.001255016200401!3d56.099603172658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465401b4e6463455%3A0x23ecf63bdcfaadde!2sK%C3%A5labergav%C3%A4gen%20130-51%2C%20288%2090%20Vinsl%C3%B6v!5e0!3m2!1sen!2sse!4v1589614781308!5m2!1sen!2sse"></iframe>
                     </div>
                 </div>
-            </div>
-            <div class="row align-items-center justify-content-center py-1">
-                <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat; font-size: 1.20rem;" class="text-white" to="/home">{{getFooter.nav.home}}</router-link></div>
-                <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat; font-size: 1.20rem;" class="text-white" to="/booking">{{getFooter.nav.booking}}</router-link></div>
-                <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat; font-size: 1.20rem;" class="text-white" to="/gallery">{{getFooter.nav.gallery}}</router-link></div>
-                <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat; font-size: 1.20rem;" class="text-white" to="/aboutus">{{getFooter.nav.aboutUs}}</router-link></div>
             </div>
         </div>
     </div>
@@ -58,9 +58,9 @@ export default {
 </script>
 
 <style scoped>
-        #text-fo{
-            font-size: 2.40rem !important;
-        }
+    #text-fo{
+        font-size: 2.40rem !important;
+    }
     #footer .fa-phone-alt{
         color: aliceblue;
         font-size: 1.50rem;
