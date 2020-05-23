@@ -15,15 +15,23 @@ export default new Vuex.Store({
   actions: {
     setSwedish({ commit }){
       let se = {
+        gallery:{
+          house:"Hus",
+          apartment:"Lägenhet"
+        },
         booking:{
           h1:" Boka ",
           h4:" Använd rabatt kod 2020 (eller Working2020 för företag) för att få 30% rabatt !!! "
+        },
+        bookinginfo:{
+          h1:"Här kan du söka din bokning"
         },
           nav:{
             home:"Hem",
             booking:"Bokning",
             gallery: "Galleri",
-            aboutUs: "Om oss"
+            aboutUs: "Om oss",
+            bookinginfo: "Sökbokning"
           },
           info:{
             wifi:"Gratis höghastighetsinternet",
@@ -69,15 +77,23 @@ export default new Vuex.Store({
 
     setEnglish({ commit }){
       let en = {
+        gallery:{
+          house:"House",
+          apartment:"Apartment"
+        },
           booking:{
             h1:" Reserve ",
             h4:" Use the promotion code 2020 (or Working2020 for companies) to get 30% discount !!!"
+          },
+          bookinginfo:{
+            h1:"Here you find your reservation"
           },
           nav:{
             home:"Home",
             booking:"Booking",
             gallery: "Gallery",
-            aboutUs: "About Us"
+            aboutUs: "About Us",
+            bookinginfo:"Search Booking"
           },
           flag:{
             icon: "flag-icon flag-icon-us",

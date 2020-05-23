@@ -5,7 +5,6 @@
       <div id="main" class="container">
           <h1 class="pt-4 text-center">Nordanå Gård</h1>
           <div  class="container">
-             <img class="ml-2 float-right" src="../assets/logo.jpg" alt="" srcset="">
             <p>{{home_text.p1.p1a}}<a href="https://sv.wikipedia.org/wiki/%C3%85hus">{{home_text.p1.p1c}}</a>{{home_text.p1.p1b}}</p>
             <p class="pb-4"  >{{home_text.p2.p2a}}<a href="https://en.wikipedia.org/wiki/Kristianstad">{{home_text.p2.p2kris}}</a>{{home_text.p2.p2c}}<a href="https://vattenriket.kristianstad.se/naturum/">{{home_text.p2.p2natur}}</a>{{home_text.p2.p2d}}<a href="http://www.regionmuseet.se/english/the-railway-museum-of-kristianstad.html">{{home_text.p2.p2muse}}</a>{{home_text.p2.p2b}}
               <a href="https://sv.wikipedia.org/wiki/Van%C3%A5s_slott">{{home_text.p2.p2vanas}}</a>{{home_text.p2.p2e}}<a href="https://sv.wikipedia.org/wiki/Vinsl%C3%B6v">{{home_text.p2.p2vins}}</a>{{home_text.p2.p2f}}<a href="https://sv.wikipedia.org/wiki/Pl%C3%B6tsligt_i_Vinsl%C3%B6v">{{home_text.p2.p2plot}}</a>

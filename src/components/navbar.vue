@@ -1,7 +1,7 @@
 <template>
     <nav>
         <nav id="mynav" class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
-            <router-link to="/" class="navbar-brand text-light ">Nordanå Gård</router-link>
+            <router-link to="/" class="navbar-brand text-light">Nordanå Gård</router-link>
             <button  class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon "></span>
             </button>
@@ -13,6 +13,9 @@
                         </li>
                         <li class="nav-item active">
                             <router-link to="/booking" class="nav-link text-light">{{currentLanguage.nav.booking}}</router-link>
+                        </li>
+                        <li class="nav-item active">
+                            <router-link to="/bookinginfo" class="nav-link text-light">{{currentLanguage.nav.bookinginfo}}</router-link>
                         </li>
                         <li class="nav-item active">
                             <router-link to="/gallery" class="nav-link text-light" href="gallery.html">{{currentLanguage.nav.gallery}}</router-link>
@@ -80,13 +83,9 @@ export default {
         margin: 0vh 3vw 0vh 0vw;
     }
 }
-
 @media only screen and (min-width: 768px) {
-
-
 }
 @media only screen and (min-width: 992px) {
-
 
 }
 </style>

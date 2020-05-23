@@ -4,7 +4,7 @@
             <div class="row py-3">
                 <div class="col-sm-12 col-md-4 align-items-center justify-content-center py-3">
                     <h5 id="text-fo" class="pl-4" style="font-family: 'Parisienne', cursive;  color: aliceblue;">Nordanå Gård</h5>
-                    <p style="font-family: 'Montserrat'; color: #EDEAE5;" class="text-center">Kålaberga Vägen 130-51 288 90 Vinslöv</p>
+                    <p style="font-family: 'Montserrat'; color: #EDEAE5;" class="text-center">Kålabergavägen 130-51 288 90 Vinslöv</p>
                 </div>
                 <div class="col-sm-12 col-md-4 d-flex align-items-center justify-content-center ">
                     <i class="fas fa-phone-alt pr-3 pb-3 "></i><a href="tel:+46 736 818 400"><h5 class="phone" style="color: aliceblue; font-family: 'Montserrat;">+46 736 818 400</h5></a>
@@ -33,7 +33,7 @@
                 <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat'; font-size: 1.20rem;" class="text-white" to="/">{{getFooter.nav.home}}</router-link></div>
                 <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat'; font-size: 1.20rem;" class="text-white" to="/booking">{{getFooter.nav.booking}}</router-link></div>
                 <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat'; font-size: 1.20rem;" class="text-white" to="/gallery">{{getFooter.nav.gallery}}</router-link></div>
-                <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat'; font-size: 1.20rem;" class="text-white" to="/aboutus">{{getFooter.nav.aboutUs}}</router-link></div>
+                <div class="col-12 col-sm-2 text-center pt-2"><router-link style="color: aliceblue; font-family: 'Montserrat'; font-size: 1.20rem;" class="text-white" to="/about">{{getFooter.nav.aboutUs}}</router-link></div>
             </div>
             <div class="row pb-3">
                 <div class="col ">

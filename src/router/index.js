@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Booking from '../views/Booking.vue'
 import Gallery from '../views/Gallery.vue'
 import About from '../views/About.vue'
+import BookingInfo from '../views/BookingInfo.vue'
 
 Vue.use(VueRouter)
 
@@ -12,6 +13,11 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/bookinginfo',
+    name: 'BookingInfo',
+    component: BookingInfo
   },
   {
     path: '/about',
