@@ -7,7 +7,14 @@
                     <p style="font-family: 'Montserrat'; color: #EDEAE5;" class="text-center">Kålabergavägen 130-51 288 90 Vinslöv</p>
                 </div>
                 <div class="col-sm-12 col-md-4 d-flex align-items-center justify-content-center ">
-                    <i class="fas fa-phone-alt pr-3 pb-3 "></i><a href="tel:+46 736 818 400"><h5 class="phone" style="color: aliceblue; font-family: 'Montserrat;">+46 736 818 400</h5></a>
+                    <div class="container">
+                        <div class="row d-flex align-items-center justify-content-center">
+                            <i class="fas fa-phone-alt pr-3 pb-3 "></i><a href="tel:+46 736 818 400"><h5 class="phone" style="color: aliceblue; font-family: 'Montserrat;">+46 736 818 400</h5></a>
+                        </div>
+                        <div class="row d-flex align-items-center justify-content-center">
+                            <i class="fab fa-whatsapp  fa-7x pr-3"></i><i class="fab fa-skype pr-3"></i><i class="fab fa-viber"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-12 col-md-4 py-3">
                     <div class="row justify-content-center">
@@ -58,6 +65,15 @@ export default {
 </script>
 
 <style scoped>
+   #footer .fa-whatsapp{
+        color:aliceblue;
+    }
+    #footer .fa-viber{
+        color: aliceblue;
+    }
+    #footer .fa-skype{
+        color: aliceblue;
+    }
     #text-fo{
         font-size: 2.40rem !important;
     }

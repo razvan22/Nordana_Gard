@@ -15,6 +15,10 @@ export default new Vuex.Store({
   actions: {
     setSwedish({ commit }){
       let se = {
+        about:{
+          p1:"Jag och min fru har varit bosatta här på gården sedan 2007 efter att mina föräldrar har drivit gården sedan 1964. Marken finns kvar men det mesta är utarrenderad . Själv jobbat inom näringslivet i drygt 45 år men är nu sysselsatt med gården till 100 % .",
+          p2:" Vi har idag 24 bäddar på olika fastigheter här. Den första byggdes 2011 och den senaste 2016  . Träning har varit en stor fritidssyssla när jag inte hade detta projekt. På 800m avstånd från gården finns fina löpstigar i skogen och fina och nästan bilfria vägar att cykla på."
+        },
         gallery:{
           house:"Hus",
           apartment:"Lägenhet"
@@ -77,6 +81,10 @@ export default new Vuex.Store({
 
     setEnglish({ commit }){
       let en = {
+        about:{
+          p1:"My wife and I have lived on the farm since 2007, after my parents have been running the farm since in 1964. The land is still there but most of it is rented out. ",
+          p2:"I have worked in the business for over 45 years but am now 100% focusing on the farm. We currently have 24 beds on different properties here. The first was built in 2011 and the latest in 2016."
+        },
         gallery:{
           house:"House",
           apartment:"Apartment"
@@ -132,8 +140,6 @@ export default new Vuex.Store({
               p2plot:"Plötsligt i Vinslöv.",
             },
           },
-
-          
       }
       commit("setLangage", en);
     }

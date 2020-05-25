@@ -10,12 +10,12 @@ Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/',
+    path: "/",
     name: 'Home',
     component: Home
   },
   {
-    path: '/bookinginfo',
+    path: "/bookinginfo",
     name: 'BookingInfo',
     component: BookingInfo
   },
@@ -47,8 +47,6 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
   routes
 })
 
