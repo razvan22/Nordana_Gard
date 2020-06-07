@@ -20,6 +20,9 @@ export default {
 
 <style scoperd>
 .bookinginfo{
+    background-color: rgba(237, 234, 229, 0.719);
+}
+.bookinginfo{
     color:#2D4159;
    font-family: 'Montserrat';
 }

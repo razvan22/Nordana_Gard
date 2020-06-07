@@ -49,7 +49,7 @@ export default new Vuex.Store({
             icon: "flag-icon flag-icon-se",
             text: {
               se: " Svenska",
-              en: " Engelska"
+              en: " English"
             }
           },
           contactText: "Kontakta oss ",
@@ -106,7 +106,7 @@ export default new Vuex.Store({
           flag:{
             icon: "flag-icon flag-icon-us",
             text: {
-              se: " Swedish",
+              se: " Svenska",
               en: " English"
             }
           },
