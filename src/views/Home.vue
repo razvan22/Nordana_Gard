@@ -41,15 +41,7 @@
             <a href>{{home_text.p2.p2fleder}}</a>
           </p>
         </div>
-        <div class="embed-responsive embed-responsive-21by9">
-          <iframe
-            class="embed-responsive-item"
-            src="https://www.youtube.com/embed/FOikrW2D2o0"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+       
         <div class="containe">
           <div id="cont" class="row mt-2">
             <div class="col-md-6 mb-1">

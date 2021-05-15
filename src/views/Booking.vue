@@ -3,7 +3,9 @@
     <div class="container">
       <h2 class="py-5">{{booking.h1}}</h2>
       <div id="sbw_widget_1" class="sbw yui3-cssreset sbw_form_id_5d948f695eb84 sbw_id_sbw_widget_1">
-        <iframe name="sirvoy-engine" src="https://secured.sirvoy.com/engine/book?id=5d948f695eb84&amp;rt=sbw_widget_1&amp;v=2&amp;host_page_url=http%3A%2F%2F192.168.8.102%3A8082%2F"></iframe>
+        <script
+          type="application/javascript"
+         async data-form-id="5d948f695eb84" src="https://secured.sirvoy.com/widget/sirvoy.js"></script>
       </div>
     </div>
   </div>
@@ -15,8 +17,7 @@ export default {
     booking(){
       return this.$store.state.language.booking
     }
-  }
-
+  },
 }
 </script>
 

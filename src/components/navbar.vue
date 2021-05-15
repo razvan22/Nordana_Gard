@@ -25,12 +25,12 @@
             <li class="nav-item active">
               <router-link to="/booking" class="nav-link text-light">{{currentLanguage.nav.booking}}</router-link>
             </li>
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
               <router-link
                 to="/bookinginfo"
                 class="nav-link text-light"
               >{{currentLanguage.nav.bookinginfo}}</router-link>
-            </li>
+            </li> -->
             <li class="nav-item active">
               <router-link
                 to="/gallery"
