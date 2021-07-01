@@ -1,7 +1,7 @@
 <template>
-  <nav>
+  <div>
     <nav id="mynav" class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
-      <router-link to="/" class="navbar-brand text-light">Nordanå Gård</router-link>
+      <!-- <router-link to="/" class="navbar-brand text-light">Nordanå Gård</router-link> -->
       <button
         class="navbar-toggler"
         type="button"
@@ -13,14 +13,14 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="container">
+      <div class="container nav-container">
         <div
-          class="collapse navbar-collapse nav justify-content-end align-self-md-center"
+          class="collapse navbar-collapse nav justify-content-center align-self-md-center"
           id="navbarNav"
         >
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <router-link to="/" class="nav-link text-light">{{currentLanguage.nav.home}}</router-link>
+          <ul class="navbar-nav" @click="borderToggle">
+            <li class="nav-item active ">
+              <router-link to="/" class="nav-link active-link text-light">{{currentLanguage.nav.home}}</router-link>
             </li>
             <li class="nav-item active">
               <router-link to="/booking" class="nav-link text-light">{{currentLanguage.nav.booking}}</router-link>
@@ -49,10 +49,48 @@
         </div>
       </div>
       <div class="pr-5">
-        <language-picker class="pr-2 languagePicker rounded shadow"></language-picker>
+        <language-picker class="pr-2 languagePicker rounded border-0"></language-picker>
       </div>
     </nav>
-  </nav>
+    <nav class="mobile-nav bg-dark container-fluid d-flex justify-content-between">
+      <i class="bi bi-list" @click="showMobileNav"></i>
+      <language-picker class="pr-2 pt-2 languagePicker rounded border-0"></language-picker>
+    </nav>
+    <div v-if="mobileNavState" class="container-fluid">
+      <div class="row d-flex">
+        <div class="col-12 mt-4 d-flex justify-content-center mobile-link" @click="showMobileNav">
+          <router-link 
+            to="/" 
+            class="text-dark text-center border-bottom border-warning border-3"
+            >
+            {{currentLanguage.nav.home}}
+          </router-link>
+        </div>
+        <div class="col-12 d-flex justify-content-center mobile-link " @click="showMobileNav">
+          <router-link 
+            to="/booking" 
+            class="text-dark text-center border-bottom border-warning border-3">
+            {{currentLanguage.nav.booking}}
+          </router-link>
+        </div>
+        <div class="col-12 d-flex justify-content-center text-center mobile-link" @click="showMobileNav">
+          <router-link 
+            to="/gallery" 
+            class="text-dark text-center border-bottom border-warning border-3" 
+            href="gallery.html">
+            {{currentLanguage.nav.gallery}}
+          </router-link>
+        </div>
+        <div class="col-12 d-flex justify-content-center text-center mobile-link" @click="showMobileNav">
+          <router-link
+            to="/about"
+            class="text-dark text-center border-bottom border-warning border-3" 
+            href="aboutus.html"
+          >{{currentLanguage.nav.aboutUs}}</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -68,31 +106,82 @@ export default {
   computed: {
     currentLanguage() {
       return this.$store.state.language;
+    },
+
+    mobileNavState(){
+      return this.$store.state.mobileNav;
+    }
+
+  },
+  methods:{
+    borderToggle(e){
+      document.getElementsByClassName("nav-link").forEach( element => element.classList.remove('active-link'))
+      if(e.target.classList.contains('nav-link')){
+        e.target.classList.add('active-link');
+      }
+    },
+    showMobileNav(){
+      let navState = !this.mobileNavState;
+      this.$store.commit('setMobileNav', navState);
     }
   }
 };
 </script>
 
 <style scoped>
+ /* yellow #faf7ba
+    green #094b25
+    blue #1b68b3
+    balck #030404
+  */
+
+.mobile-link{
+  font-size: 2rem;
+  font-family: "Gill Sans";
+}
+
+.bi-list{
+ font-size: 2.1rem !important;
+ color: aliceblue !important;
+}
+.bi-list:hover{
+  cursor: pointer;
+}
+.navbar-toggler-icon{
+  fill: #faf7ba !important;
+}
+
 .navbar-dark .navbar-toggler {
   border: 0;
 }
+
 #mynav .languagePicker {
   border: solid 0.5px rgba(210, 217, 221, 0.377);
 }
+.active-link {
+  border: solid #faf7ba;
+  border-width: 2px 0px 2px 0px;
+}
 .nav-link {
+  padding: 1rem;
   color: aliceblue !important;
 }
+
+.nav-link:hover{
+  border: solid #faf7ba;
+  border-width: 2px 0px 2px 0px;
+}
+
 .navbar-brand {
   font-family: "Parisienne", cursive;
   font-size: 1.50rem;
 }
 .bg-dark {
-  background-color: #31708e !important;
+  background-color: #030404 !important;
 }
 
 #mynav .navbar-nav .nav-item {
-  font-weight: 200 !important;
+  font-weight: 300 !important;
   font-size: 1.1rem !important;
   margin: 0vh 2vw 0vh 2vw;
 }
@@ -123,9 +212,21 @@ export default {
   }
 }
 
-@media only screen and (max-width: 767px) {
-  #mynav .languagePicker {
-    display: none;
+@media only screen and (min-width: 769px) {
+  .mobile-nav{
+    display: none !important;
   }
 }
+
+@media (max-width: 769px){
+  #mynav{
+    display: none;
+  }
+  .mobile-nav{
+    display: block;
+  }
+}
+
+
+
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="language">
-    <div class="btn-group" role="group">
-        <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="btn-group language-button rounded" role="group">
+        <button class="btn btn-sm dropdown-toggle " type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              <i v-bind:class="getFlag.flag.icon"></i>
         </button>
         <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="btnGroupDrop1">
@@ -33,8 +33,11 @@ export default {
 
 
 <style>
-button i {
-    font-size: 1.20rem;
-}
+    button i {
+        font-size: 1.20rem;
+    }
+    .language-button{
+        background-color: rgb(255, 255, 255);
+    }
 
 </style>

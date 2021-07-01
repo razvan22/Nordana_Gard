@@ -5,11 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    language:{}
+    language:{},
+    mobileNav: false,
   },
   mutations: {
     setLangage( state , value){
       state.language = value;
+    },
+    setMobileNav(state, value){
+      state.mobileNav = value
     }
   },
   actions: {

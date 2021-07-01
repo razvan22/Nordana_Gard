@@ -1,23 +1,31 @@
 <template>
   <div id="app">
-    <navBar />
-    <langauage-picker id="language-picker" class="d-flex justify-content-end pr-0" />
-    <router-view />
-    <bootFooter />
+    <navBar class="nav mb-4" />
+    <div v-if="mobileNavState == false">
+      <router-view/>
+      <bootFooter />
+    </div>
   </div>
 </template>
 <script>
 import navBar from "../src/components/navbar.vue";
-import langauagePicker from "../src/components/languagePicker.vue";
 import bootFooter from "../src/components/bootFooter.vue";
 export default {
   components: {
     navBar,
-    langauagePicker,
     bootFooter
   },
+  
   created() {
     this.$store.dispatch("setSwedish");
+  },
+  
+  computed:{
+    mobileNavState(){
+      return this.$store.state.mobileNav;
+    }
+
+
   }
 };
 </script>
@@ -35,12 +43,17 @@ export default {
   width: 100%;
 }
 
+#app #language-picker {
+  display: none !important;
+}
+
 @media only screen and (min-width: 600px) {
   #app {
     padding-top: 3.70rem;
   }
   #language-picker {
     padding-right: 2vw;
+  
   }
 }
 @media only screen and (max-width: 600px) {
@@ -51,6 +64,14 @@ export default {
 @media only screen and (min-width: 767px) {
   #app #language-picker {
     display: none !important;
+  }
+}
+@media (max-width: 769px){
+  #app{
+    padding-top: 0;
+  }
+  .nav{
+    margin-bottom: 0 !important;
   }
 }
 </style>
