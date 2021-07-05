@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <navBar class="nav mb-4" />
+    <navBar class="nav mb-3" />
     <div v-if="mobileNavState == false">
       <router-view/>
       <bootFooter />
@@ -31,16 +31,20 @@ export default {
 </script>
 
 <style scoped>
+
 #app {
   padding: 0;
   position: relative;
   min-height: 100vh;
+
 }
+
 
 #foot {
   position: absolute;
   bottom: 0;
   width: 100%;
+  
 }
 
 #app #language-picker {

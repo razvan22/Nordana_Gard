@@ -1,11 +1,15 @@
 <template>
-  <div class="home">
-    <div class="container px-0 shadow">
-      <div class="head"></div>
-      <div id="main" class="container">
-        <h1 class="pt-1 text-center">Nordanå Gård</h1>
-        <div class="container">
-          <p>
+  <div class="container-fluid pb-lg-5">
+    <div class="row d-felx justify-content-center">
+      <section class="col-12 p-0 m-0 d-flex flex-column">
+        <img src="../assets/home-page/pool.jpg" class="home-image w-100 h-75">
+        <h1 class="name text-center"><span class="name-bg p-3 px-4 rounded">Nordanå Gård</span></h1>
+      </section>
+      <section class="col-12">
+        <div class="row p-0 description mx-lg-5 rounded">
+          <div class="col-lg-8 p-lg-5">
+           <div class="m-lg-5 m-2">
+              <p>
             {{home_text.p1.p1a}}
             <a
               href="https://sv.wikipedia.org/wiki/%C3%85hus"
@@ -40,10 +44,15 @@
             {{home_text.p2.p2samt}}
             <a href>{{home_text.p2.p2fleder}}</a>
           </p>
+           </div>
+          </div>
+          <div class="col-lg-3 m-3 d-flex justify-content-center">
+            <img class="logo-image" src="../assets/log.gif" alt="">
+          </div>
         </div>
-       
-        <div class="containe">
-          <div id="cont" class="row mt-2">
+        <div class="row">
+          <div class="containe">
+          <div id="cont" class="row mt-2 info">
             <div class="col-md-6 mb-1">
               <div class="row">
                 <div class="col d-flex justify-content-center">
@@ -134,7 +143,8 @@
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      </section>  
     </div>
   </div>
 </template>
@@ -148,81 +158,97 @@ export default {
     getFacility() {
       return this.$store.state.language.info;
     }
-  }
+  },
 };
 </script>
 
 <style scoped>
-.home {
-  min-height: 100vh;
+
+ /* yellow #faf7ba
+    green #094b25
+    blue #1b68b3
+    balck #030404
+  */
+.container-fluid {
+  background-color:#094b24dc;
 }
-h4 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #2d4159;
+.name{
+  position: relative;
+  top: -50%;
+  color: rgb(16, 18, 19);
+  font-weight: 900;
+  font-family: 'Old Standard TT', serif;
 }
-.container .b-icon {
-  font-size: 2rem;
-  color: #2d4159;
+.name-bg{
+  background-color: rgba(240, 255, 255, 0.803);
+}
+.home-image{
+  filter: brightness(65%);
+}
+.description{
+  margin-top:-20%;
+  background-color: white;
+}
+.logo-image{
+  height: 40vh;
+}
+.info{
+  color:#faf7ba;
 }
 
-.home #main img {
-  height: auto;
-  max-width: 25%;
-  border-radius: 1rem;
-}
-
-.home .container h1 {
-  font-size: 3.5rem !important;
-  color: #2d4159;
-  font-family: "Parisienne", cursive;
-}
-
-.head {
-  height: 20rem;
-  min-height: 20rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("../assets/head.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 0.15rem;
-}
-
-.home .container .container {
-  background-color: #edeae5;
-}
-
-@media only screen and (max-width: 600px) {
-  .home .container h1 {
-    font-size: 3rem !important;
+@media only screen and (max-width: 398px) {
+  .name-bg{
+    font-size: 1.50rem;
+    letter-spacing: 0.40rem;
   }
-  .home #main img {
-    max-width: 0%;
+}
+
+@media only screen and (min-width: 400px) {
+  .name-bg{
+    font-size: 1.80rem;
+    letter-spacing: 0.40rem;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .name-bg{
+    font-size: 2.5rem;
+    letter-spacing: 0.60rem;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .name-bg{
+    font-size: 2.5rem;
+    letter-spacing: 0.70rem;
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .home .container h1 {
-    font-size: 4rem;
+.name-bg{
+    font-size: 3.5rem;
+    letter-spacing: 0.70rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .home .container h1 {
-    font-size: 5rem;
-  }
-  h4 {
-    font-size: 16px;
+  .name-bg{
+    font-size: 4.5rem;
+    letter-spacing: 0.80rem;
   }
 }
-@media only screen and (min-width: 830px) {
-  h4 {
-    font-size: 16px;
-  }
-}
+
 @media only screen and (min-width: 992px) {
-  h4 {
-    font-size: 20px;
+   .name-bg{
+    font-size: 5rem;
+    letter-spacing: 1rem;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .name-bg{
+    font-size: 6rem;
+    letter-spacing: 1rem;
+  }
+} 
 </style>
