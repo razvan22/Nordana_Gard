@@ -39,6 +39,7 @@ export default new Vuex.Store({
             booking:"Bokning",
             gallery: "Galleri",
             aboutUs: "Om oss",
+            contact: "Kontakt",
             bookinginfo: "Sökbokning"
           },
           info:{
@@ -105,6 +106,7 @@ export default new Vuex.Store({
             booking:"Booking",
             gallery: "Gallery",
             aboutUs: "About Us",
+            contact: "Contact",
             bookinginfo:"Search Booking"
           },
           flag:{

@@ -38,6 +38,12 @@
                 href="gallery.html"
               >{{currentLanguage.nav.gallery}}</router-link>
             </li>
+            <li class="nav-item active">
+              <a
+                class="nav-link text-light"
+                href="#contact"
+              >{{currentLanguage.nav.contact}}</a>
+            </li>
             <li class="aboutus nav-item active">
               <router-link
                 to="/about"
@@ -80,6 +86,13 @@
             href="gallery.html">
             {{currentLanguage.nav.gallery}}
           </router-link>
+        </div>
+        <div class="col-12 d-flex justify-content-center text-center mobile-link" @click="showMobileNav">
+           <a
+            class="text-dark text-center border-bottom border-warning border-3"
+            href="#contact"
+            >{{currentLanguage.nav.contact}}
+          </a>
         </div>
         <div class="col-12 d-flex justify-content-center text-center mobile-link" @click="showMobileNav">
           <router-link

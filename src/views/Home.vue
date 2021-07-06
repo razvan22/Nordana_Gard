@@ -186,7 +186,7 @@ export default {
   filter: brightness(65%);
 }
 .description{
-  margin-top:-20%;
+  margin-top:-22%;
   background-color: white;
 }
 .logo-image{
