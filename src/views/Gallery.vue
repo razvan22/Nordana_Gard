@@ -1,8 +1,8 @@
 <template>
   <div id="gallery">
-      <div class="container mb-5">
-        <h4 class="text-right pr-5">{{getGallery.house}} A & B</h4>
-        <div id="c-1" class="carousel slide my-5" data-ride="carousel">
+      <div class="container pb-5 px-0">
+        <h4 class="text-sm-left pr-5 pt-3">{{getGallery.house}} A & B</h4>
+        <div id="c-1" class="carousel slide my-5 " data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="../assets/abhus/IMG_0063.jpg" class="d-block w-100" alt="">
@@ -87,7 +87,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
         </div>
-        <h4 class="text-right pr-5">{{getGallery.house}} C & D</h4>
+        <h4 class="text-sm-left pr-5">{{getGallery.house}} C & D</h4>
         <div id="c-2" class="carousel slide my-5" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -149,7 +149,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
         </div>
-        <h4 class="text-right pr-5">{{getGallery.house}} E & F</h4>
+        <h4 class="text-sm-left pr-5">{{getGallery.house}} E & F</h4>
         <div id="c-3" class="carousel slide my-5" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item">
@@ -229,7 +229,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
         </div>
-         <h4 class="text-right pr-5">{{getGallery.apartment}}</h4>
+         <h4 class="text-sm-left pr-5">{{getGallery.apartment}}</h4>
         <div id="apartment" class="carousel slide my-5" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -324,17 +324,26 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+ /* yellow #faf7ba
+    green #094b25
+    blue #1b68b3
+    balck #030404
+  */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 #gallery{
-    min-height: 100vh;
-    
+    min-height: 90vh;
+    background:#094b25;
 } 
+#gallery img{
+    height: 70vh !important;
+}
 #gallery h4 {
     text-align: center;
-    color:#2D4159;
-    font-family: 'Montserrat';
+    color:#faf7ba;
+    font-family: 'Oswald', sans-serif;
     font-size: 2.20rem;
 } 
-
 
 </style>

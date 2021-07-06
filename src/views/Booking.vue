@@ -22,18 +22,23 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+ /* yellow #faf7ba
+    green #094b25
+    blue #1b68b3
+    balck #030404
+  */
+#booking{
+  background: #094b25;
+}
 #booking .container{
   text-align: center;
-  color:#2D4159;
-  font-family: 'Montserrat';
-  background-color: rgba(237, 234, 229, 0.719);
-  border-radius: 5px 5px 0 0;
 }
 #booking h2 {
   text-align: center;
-  color:#2D4159;
-   font-family: 'Montserrat';
-   font-size: 2.60rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.60rem;
+  color: #faf7ba;
 }
 
 @media only screen and (max-width: 600px) {

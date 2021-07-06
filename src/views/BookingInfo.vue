@@ -19,13 +19,16 @@ export default {
 </script>
 
 <style scoperd>
+
+
 .bookinginfo{
     background-color: rgba(237, 234, 229, 0.719);
 }
 .bookinginfo{
     color:#2D4159;
-   font-family: 'Montserrat';
+   font-family: 'Oswald', sans-serif;
 }
+
 @media only screen and (max-width: 600px) {
    h1 {
     font-size: 1.20rem;

@@ -64,17 +64,11 @@ export default {
 font-family: 'Oswald', sans-serif;
 }
 
-@media only screen and (min-width: 768px) {
-
-
-}
+@media only screen and (min-width: 768px) {}
 @media only screen and (max-width: 768px) {
     .links{
         text-align: center;
     }   
 }
-
-@media only screen and (max-width: 600px) {
-
-}
+@media only screen and (max-width: 600px) {}
 </style>

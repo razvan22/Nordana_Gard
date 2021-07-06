@@ -5,10 +5,10 @@
         <img src="../assets/home-page/pool.jpg" class="home-image w-100 h-75">
         <h1 class="name text-center"><span class="name-bg p-3 px-4 rounded">Nordanå Gård</span></h1>
       </section>
-      <section class="col-12">
+      <section class="col-sm-12 col-md-11">
         <div class="row p-0 description mx-lg-5 rounded">
           <div class="col-lg-8 p-lg-5">
-           <div class="m-lg-5 m-2">
+           <div class="">
               <p>
             {{home_text.p1.p1a}}
             <a
